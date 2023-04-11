@@ -15,10 +15,24 @@ const ScoreInput = ({ i, setTotal, total }) => {
   };
   return (
     <CellContainer>
-      <Input type="number" onChange={handleChange}></Input>
+      {i === 6 ? (
+        <Container>
+          <Input type="checkbox"></Input>
+          <Input type="checkbox"></Input>
+          <Input type="checkbox"></Input>
+        </Container>
+      ) : (
+        <Input type="number" onChange={handleChange}></Input>
+      )}
     </CellContainer>
   );
 };
+
+const Container = styled.div`
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid black;
+`;
 
 const Input = styled.input`
   /* max-width: 50px; */
