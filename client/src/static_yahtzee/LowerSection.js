@@ -3,7 +3,6 @@ import styled from "styled-components";
 import YAxisHeaders from "./YAxisHeaders";
 import { lowerSection } from "../data/lowerSection";
 import LowerSectionHeader from "./LowerSectionHeader";
-import YahtzeeForm from "./YahtzeeForm";
 import LowerYahtzeeForm from "./LowerYahtzeeForm";
 
 const LowerSection = () => {

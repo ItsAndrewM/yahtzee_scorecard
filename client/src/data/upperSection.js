@@ -1,4 +1,3 @@
-import Icon from "@mdi/react";
 import {
   mdiDice1,
   mdiDice2,
