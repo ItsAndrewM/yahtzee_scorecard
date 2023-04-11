@@ -12,13 +12,36 @@ const ScoreInput = ({ i, setTotal, total }) => {
       setTotal(totalArr);
     }
   };
+
+  const handleCheck = (e) => {
+    if (e.target.value) {
+      const totalArr = [
+        ...total.slice(0, i),
+        Number(e.target.value),
+        ...total.slice(i + 1),
+      ];
+      setTotal(totalArr);
+    }
+  };
   return (
     <CellContainer>
       {i === 6 ? (
         <Container>
-          <Input type="checkbox"></Input>
-          <Input type="checkbox"></Input>
-          <Input type="checkbox"></Input>
+          <Checkbox
+            type="checkbox"
+            onChange={handleCheck}
+            value={100}
+          ></Checkbox>
+          <Checkbox
+            type="checkbox"
+            onChange={handleCheck}
+            value={200}
+          ></Checkbox>
+          <Checkbox
+            type="checkbox"
+            onChange={handleCheck}
+            value={300}
+          ></Checkbox>
         </Container>
       ) : (
         <Input type="number" onChange={handleChange}></Input>
@@ -29,16 +52,29 @@ const ScoreInput = ({ i, setTotal, total }) => {
 
 const Container = styled.div`
   width: 100%;
+  height: 100%;
   display: flex;
-  border-bottom: 1px solid black;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
 `;
 
-const Input = styled.input`
-  /* max-width: 50px; */
+const Checkbox = styled.input`
   width: 100%;
   text-align: center;
   height: 100%;
   font-size: 16px;
+  border: 1px solid black;
+`;
+
+const Input = styled.input`
+  width: 100%;
+  text-align: center;
+  height: 100%;
+  font-size: 16px;
+  /* -webkit-appearance: none; */
+  margin: 0;
+  border: 1px solid black;
 `;
 
 const CellContainer = styled.div`
@@ -47,7 +83,7 @@ const CellContainer = styled.div`
   flex-wrap: nowrap;
   align-items: center;
   width: 100%;
-  height: 30px;
+  height: 100%;
 `;
 
 export default ScoreInput;

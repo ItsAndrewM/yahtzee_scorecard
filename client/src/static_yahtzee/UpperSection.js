@@ -33,7 +33,7 @@ const FormWrapper = styled.div`
 const FormContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
   height: 100%;
 `;
@@ -43,6 +43,9 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  border-width: 1px;
+  border-color: black;
+  border-style: double;
 `;
 
 export default UpperSection;

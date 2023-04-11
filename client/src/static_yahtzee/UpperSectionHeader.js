@@ -57,15 +57,15 @@ const CellContainer = styled.div`
   flex-wrap: nowrap;
   align-items: center;
   width: 100%;
-  border: 1px solid red;
+  border: 1px solid black;
 `;
 
 const RowWrapper = styled.div`
   display: flex;
   justify-content: space-around;
-  border: 2px solid blue;
   width: 100%;
   height: 40px;
+  border-bottom: 1px solid black;
 `;
 
 export default UpperSectionHeader;

@@ -37,6 +37,9 @@ const FormWrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  border-width: 1px;
+  border-color: black;
+  border-style: double;
 `;
 
 const Wrapper = styled.div`

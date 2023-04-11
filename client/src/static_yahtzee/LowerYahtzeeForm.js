@@ -23,7 +23,6 @@ const LowerYahtzeeForm = ({ i }) => {
   return (
     <Form>
       {arr.map((val, index) => {
-        console.log(index);
         return (
           <ScoreInput key={index} i={index} setTotal={setTotal} total={total} />
         );
@@ -46,17 +45,17 @@ const CellContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 30px;
-  border-bottom: 1px solid black;
+  height: 84%;
+  border: 1px solid black;
 `;
 
 const Form = styled.form`
   width: 100%;
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   height: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const P = styled.p`

@@ -6,7 +6,6 @@ const YAxisHeaders = ({ arr }) => {
   return (
     <Container>
       {arr.map((val, index) => {
-        console.log(val.howToScore);
         return (
           <RowContainer key={index}>
             <CellContainer>
@@ -43,7 +42,7 @@ const RowContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  border: 1px solid blue;
+  height: 100%;
 `;
 
 const CellContainer = styled.div`
@@ -51,14 +50,16 @@ const CellContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  border: 1px solid black;
+  height: 100%;
 `;
 
 const Container = styled.div`
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  border: 2px solid limegreen;
 `;
 export default YAxisHeaders;
