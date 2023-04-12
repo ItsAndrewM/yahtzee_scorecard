@@ -8,7 +8,7 @@ export default createGlobalStyle`
     }
     :root {
         --primary-color: #FFFFFF;
-        --accent-primary-color: #145DA0;
+        --accent-primary-color: #000000;
         --accent-secondary-color: #B1D4E0;
         --accent-text-color: #051D40;
         /* --page-horizontal-padding: 20px; */
@@ -66,16 +66,23 @@ export default createGlobalStyle`
         color: var(--accent-primary-color);
         font-family: var(--heading-font-family);
         font-weight: bolder;
+        
     }
-    p, button, a {
+    p, button, a, label {
         color: var(--accent-primary-color);
         font-size: 16px;
+        @media only screen and (max-width: 667px){
+            font-size: 8px;
+        }
     }
     h2 {
         font-size: 28px;
     }
     h1 {
         font-size: 50px;
+        @media screen  and (max-width: 667px) {
+            font-size: 30px ;
+        }
     }
     
 

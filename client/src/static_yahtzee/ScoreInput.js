@@ -51,39 +51,62 @@ const ScoreInput = ({ i, setTotal, total }) => {
 };
 
 const Container = styled.div`
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  @media screen and (max-width: 667px) {
+    flex-direction: column;
+    height: 100%;
+  }
 `;
 
 const Checkbox = styled.input`
+  display: flex;
   width: 100%;
   text-align: center;
   height: 100%;
   font-size: 16px;
-  border: 1px solid black;
+  padding: 0px;
+  @media screen and (max-width: 667px) {
+    font-size: 8px;
+    padding: 0;
+    margin: 0;
+    height: 10px;
+  } ;
 `;
 
 const Input = styled.input`
+  display: flex;
   width: 100%;
   text-align: center;
   height: 100%;
-  font-size: 16px;
+  /* font-size: 16px; */
   /* -webkit-appearance: none; */
   margin: 0;
+  padding: 0;
   border: 1px solid black;
+  @media screen and (max-width: 667px) {
+    font-size: 8px;
+  } ;
 `;
 
 const CellContainer = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: nowrap;
   align-items: center;
   width: 100%;
   height: 100%;
+
+  @media screen and (max-width: 667px) {
+    /* max-height: 30px; */
+  } ;
 `;
 
 export default ScoreInput;

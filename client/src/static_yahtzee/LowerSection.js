@@ -25,10 +25,12 @@ const LowerSection = () => {
 
 const FormContainer = styled.div`
   display: flex;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
+  min-width: 0;
 `;
 
 const FormWrapper = styled.div`

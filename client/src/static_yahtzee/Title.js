@@ -8,8 +8,8 @@ const Title = () => {
       </Container>
       <Container>
         <Form>
-          <Label>Name:</Label>
-          <Input />
+          <Label for="fname">Name:</Label>
+          <Input type="text" name="fname" />
         </Form>
       </Container>
     </Wrapper>

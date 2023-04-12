@@ -49,7 +49,7 @@ const RowWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   width: 100%;
-  height: 40px;
+  height: 100%;
 `;
 
 export default LowerSectionHeader;

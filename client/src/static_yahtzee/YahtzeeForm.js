@@ -58,8 +58,11 @@ const CellContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 30px;
+  height: 100%;
   border: 1px solid black;
+  @media screen and (max-width: 667px) {
+    max-height: 37px;
+  }
 `;
 
 const Form = styled.form`
