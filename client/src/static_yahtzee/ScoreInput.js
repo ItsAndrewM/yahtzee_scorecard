@@ -14,12 +14,15 @@ const ScoreInput = ({ i, setTotal, total }) => {
   };
 
   const handleCheck = (e) => {
-    if (e.target.value) {
+    if (e.target.checked) {
       const totalArr = [
         ...total.slice(0, i),
         Number(e.target.value),
         ...total.slice(i + 1),
       ];
+      setTotal(totalArr);
+    } else {
+      const totalArr = [...total.slice(0, i), 0, ...total.slice(i + 1)];
       setTotal(totalArr);
     }
   };
