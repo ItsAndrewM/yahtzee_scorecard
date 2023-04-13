@@ -6,7 +6,7 @@ import YAxisHeaders from "./YAxisHeaders";
 import { upperSection } from "../data/upperSection";
 
 const UpperSection = () => {
-  const [arr, setArr] = useState([0, 1, 2, 3, 4, 5]);
+  const [arr] = useState([0, 1, 2, 3, 4, 5]);
   return (
     <Wrapper>
       <UpperSectionHeader />

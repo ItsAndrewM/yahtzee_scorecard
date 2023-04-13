@@ -35,7 +35,7 @@ const Container = styled.div`
 
 const Wrapper = styled.div`
   max-width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   position: relative;

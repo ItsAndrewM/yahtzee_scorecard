@@ -25,7 +25,7 @@ const ScoreInput = ({ i, setTotal, total }) => {
   };
   return (
     <CellContainer>
-      {i === 6 ? (
+      {i === 7 ? (
         <Container>
           <Checkbox
             type="checkbox"

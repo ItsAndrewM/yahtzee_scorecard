@@ -1,14 +1,16 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useState } from "react";
 import styled from "styled-components";
 import ScoreInput from "./ScoreInput";
+import { GrandTotalContext } from "./GrandTotalContext";
 
 const YahtzeeForm = ({ i }) => {
   const [total, setTotal] = useState([0, 0, 0, 0, 0, 0, 0]);
-  const [arr, setArr] = useState([0, 1, 2, 3, 4, 5]);
+  const [arr] = useState([0, 1, 2, 3, 4, 5]);
   const [sectionTotal, setSectionTotal] = useState(0);
   const [grandTotal, setGrandTotal] = useState(0);
   const [bonus, setBonus] = useState(false);
+  const { action } = useContext(GrandTotalContext);
 
   useEffect(() => {
     let sum = 0;
@@ -17,14 +19,17 @@ const YahtzeeForm = ({ i }) => {
       if (sum >= 63) {
         setBonus(true);
         setGrandTotal(sum + 35);
+        action.receiveNewScore({ [`game${i + 1}`]: sum + 35 });
       } else {
         setBonus(false);
+        setGrandTotal(sum);
+        action.receiveNewScore({ [`game${i + 1}`]: sum });
       }
     }
     window.localStorage.setItem(`game${i}`, grandTotal);
 
     setSectionTotal(sum);
-  }, [total]);
+  }, [total, grandTotal, i]);
 
   return (
     <Form>

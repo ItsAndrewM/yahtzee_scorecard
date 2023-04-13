@@ -6,7 +6,7 @@ import LowerSectionHeader from "./LowerSectionHeader";
 import LowerYahtzeeForm from "./LowerYahtzeeForm";
 
 const LowerSection = () => {
-  const [arr, setArr] = useState([0, 1, 2, 3, 4, 5]);
+  const [arr] = useState([0, 1, 2, 3, 4, 5]);
 
   return (
     <Wrapper>

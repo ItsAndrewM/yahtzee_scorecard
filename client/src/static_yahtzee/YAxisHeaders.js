@@ -10,7 +10,13 @@ const YAxisHeaders = ({ arr }) => {
           <RowContainer key={index}>
             <CellContainer>
               <P>{val.title}</P>
-              {val.description ? <SmallP>{val.description}</SmallP> : <></>}
+              {val.description ? (
+                <SmallContainer>
+                  <SmallP>{val.description}</SmallP>
+                </SmallContainer>
+              ) : (
+                <></>
+              )}
               {val.icon ? (
                 <Icon path={val.icon} style={{ height: "30px" }} />
               ) : (
@@ -32,10 +38,20 @@ const YAxisHeaders = ({ arr }) => {
   );
 };
 
+const SmallContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+`;
+
 const SmallP = styled.p`
   font-size: 10px;
   width: 100%;
   height: 100%;
+  margin-top: 15%;
+  margin-left: 10%;
   @media screen and (max-width: 667px) {
     font-size: 8px;
   }
