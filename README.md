@@ -1,5 +1,46 @@
 # yahtzee_scorecard
 
+
+# Yahtzee Scorecard
+
+Yahtzee Scorecard is a web-based application that allows players to keep score of their Yahtzee game. It is developed using HTML, CSS, and JavaScript and is available for free on GitHub.
+
+
+## Features
+
+- Keep track of up to six players' scores for a complete game of Yahtzee
+- Automatically calculate the total score for each player based on the values entered in the scorecard
+- Show the upper and lower section subtotals and the bonus points for each player
+- Display the final winner of the game
+
+
+## Installation
+
+Install client with yarn
+
+```bash
+  cd client
+  yarn install 
+```
+To use Yahtzee Scorecard, simply visit the deployed website at https://yahtzeescorecard.xyz/. There is no need to install anything.
+## Usage/Examples
+
+To start using the application, simply visit the website mentioned above. The application will prompt you to enter the names of up to six players. Once you have entered the player names, the application will guide you through the game and allow you to keep score for each round.
+
+To score a player's roll, simply click on the corresponding category and enter the number of points scored for that category. The application will automatically update the scorecard and show the current subtotal and total scores for each player.
+
+## Contributing
+
+Contributions to Yahtzee Scorecard are always welcome! If you would like to contribute, please fork the repository and submit a pull request.
+
+Before submitting a pull request, please make sure that your code adheres to the best practices and conventions for HTML, CSS, and JavaScript.
+
+## License
+
+Yahtzee Scorecard is released under the [MIT License](https://choosealicense.com/licenses/mit/)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
