@@ -1,6 +1,3 @@
-# yahtzee_scorecard
-
-
 # Yahtzee Scorecard
 
 Yahtzee Scorecard is a web-based application that allows players to keep score of their Yahtzee game. It is developed using HTML, CSS, and JavaScript and is available for free on GitHub.
